@@ -1,0 +1,80 @@
+2020-04-28 19:21:55,176 ERROR: Exception on /upload [POST] [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: track.filename
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/routes.py", line 216, in upload
+    db.session.commit()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1135, in _emit_insert_statements
+    result = cached_connections[connection].execute(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: track.filename
+[SQL: INSERT INTO track (title, description, timestamp, filename, user_id) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('Everlong (wit Kitty)', 'Practicing this song for like the first time with Kitty', '2020-04-29 00:21:55.175873', 'everlong.wav', 1)]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2020-04-29 04:07:45,159 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 05:47:38,440 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 10:47:33,520 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 11:00:16,927 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 11:00:20,193 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 11:00:24,955 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-30 17:43:42,367 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]

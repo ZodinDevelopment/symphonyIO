@@ -1,0 +1,60 @@
+2020-04-28 17:39:22,396 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:42:47,625 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:42:59,651 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:43:17,827 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:44:45,057 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:49:09,570 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:50:14,942 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:50:38,948 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:50:48,633 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:50:55,360 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:51:00,301 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:51:38,201 ERROR: Exception on /index [GET] [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/routes.py", line 36, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/models.py", line 63, in followed_posts
+    followers, (follwers.c.followed_id == Post.user_id)).filter(
+NameError: name 'follwers' is not defined
+2020-04-28 17:51:57,282 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:52:50,111 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:53:20,309 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:53:24,606 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:53:30,913 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:54:08,543 ERROR: Exception on /index [GET] [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/routes.py", line 36, in index
+    posts = current_user.followed_posts().paginate(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/models.py", line 66, in followed_posts
+    own = Post.query.filter_by(user_id==self.id)
+NameError: name 'user_id' is not defined
+2020-04-28 17:55:25,376 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 17:55:28,454 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]

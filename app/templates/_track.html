@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('user', username=track.artist.username) }}">
+                <img src="{{ track.artist.avatar(64) }}">
+            </a>
+        </td>
+        <td>
+            <h3>{{ track.title }}</h3>
+            <p>{{ track.listens }} listens</p>
+            <a href="{{ url_for('music', username=track.artist.username) }}">
+                More by {{ track.artist.username }}
+            </a>
+            <br>
+            {{ track.timestamp }}<hr>
+            {% if current_user == track.artist %}
+            <p><a href="{{ url_for('delete', tracktitle=track.title) }}">Delete</a></p>
+            {% endif %}
+            <audio controls>
+                <source src="{{ url_for('listen', tracktitle=track.title) }}">
+            Your browser does not support this audio format.
+            </audio>
+        </td>
+    </tr>
+</table>

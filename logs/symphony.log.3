@@ -1,0 +1,84 @@
+2020-04-28 18:06:33,956 ERROR: Exception on /upload [POST] [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/routes.py", line 191, in upload
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/werkzeug/datastructures.py", line 3066, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/uploads/everlong.wav'
+2020-04-28 18:06:49,089 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:08:04,887 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:09:45,650 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:10:39,031 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:11:55,051 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:14:56,015 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:15:09,878 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
+2020-04-28 18:15:40,677 ERROR: Exception on /music/toasterkief [GET] [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/routes.py", line 121, in music
+    return render_template('music.html', user=user, tracks=tracks.items, next_url=next_url, prev_url=prev_url)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/templates/music.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/templates/base.html", line 53, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/templates/music.html", line 24, in block "app_content"
+    {% include '_track.html' %}
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/templates/_track.html", line 10, in top-level template code
+    <a href="{{ url_for('tracks', username=track.artist.username) }}">
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/home/toasterkief/PyLibrary/Web/Flask/symphonyIO/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'tracks' with values ['username']. Did you mean 'bootstrap.static' instead?
+2020-04-28 18:16:24,304 INFO: Symphony IO Site Started Up [in /home/toasterkief/PyLibrary/Web/Flask/symphonyIO/app/__init__.py:59]
